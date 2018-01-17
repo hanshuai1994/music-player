@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>音乐播放器</title>
+        <link rel="icon" href="/img/favicon.jpg">
+        <link rel="stylesheet" href="/css/particles.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <!-- ul 是用来放播放列表的 -->
+        <ul id='id-ul-song-list'>
+        </ul>
+
+        <div class="container">
+            <nav>
+
+            </nav>
+            <div class="middle">
+                <div class="middle-left">
+
+                </div>
+                <div class="middle-right">
+
+                </div>
+            </div>
+            <footer>
+                <div class="player">
+                  <!-- audio 就是我们的播放器, 加入 controls 属性是让浏览器生成一套默认的外观 -->
+                  <!-- 之后我们当然会生成自己的外观, 现在就用默认的外观 -->
+                  <audio id='id-audio-player' controls></audio>
+                </div>
+            </footer>
+        </div>
+        <div id="particles">
+            <canvas class="particles-js-canvas-el"></canvas>
+        </div>
+
+        <script src="js/particles_set.js"></script>
+        <script src="js/music-player.js"></script>
+    </body>
+</html>
