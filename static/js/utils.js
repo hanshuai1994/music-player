@@ -1,6 +1,4 @@
-const log = function() {
-    console.log.bind(console)
-}
+const log = console.log.bind(console)
 
 const e = function(selector) {
     return document.querySelector(selector)
@@ -81,4 +79,20 @@ const isFirefox = () => {
         return true
     }
     return false
+}
+
+const timerFormat = (s) => {
+    const min = Math.floor(s / 60)
+    var sec = Math.floor(s % 60)
+    if (sec < 10) {
+        sec = '0' + sec
+    }
+    return min + ':' + sec
+}
+
+const guasync = (callback) => {
+    // setTimeout 函数一定会把第一个参数放在后台去执行
+    setTimeout(() => {
+        callback()
+    }, 0)
 }

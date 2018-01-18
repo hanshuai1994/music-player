@@ -4,42 +4,63 @@
         <meta charset="utf-8">
         <title>音乐播放器</title>
         <link rel="icon" href="/img/favicon.jpg">
-        <link rel="stylesheet" href="/css/particles.css">
         <link rel="stylesheet" href="/css/style.css">
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
         <script src="js/utils.js"></script>
         <script src="js/jquery.js"></script>
     </head>
     <body>
-        <!-- ul 是用来放播放列表的 -->
-        <ul id='id-ul-song-list'>
-        </ul>
-
-        <div class="container">
-            <nav>
-
-            </nav>
-            <div class="middle">
-                <div class="middle-left">
-
-                </div>
-                <div class="middle-right">
-
+        <div class="music-box">
+            <div class="album">
+                <div class="photo"></div>
+                <div class="infos">
+                    <div class="song">
+                        <span>Flamingo</span><small>Oliver Heldens</small>
+                    </div>
                 </div>
             </div>
-            <footer>
-                <div class="player">
-                  <!-- audio 就是我们的播放器, 加入 controls 属性是让浏览器生成一套默认的外观 -->
-                  <!-- 之后我们当然会生成自己的外观, 现在就用默认的外观 -->
-                  <audio id='id-audio-player' controls></audio>
+            <div class="dashboard">
+                <div class="list">
+                    <div class="list-btn"><span></span></div>
                 </div>
-            </footer>
+                <div class="player">
+                    <audio id="id-audio-player"></audio>
+                    <div class="time">
+                        <small class="current">0:00</small> / <small class="duration">2:20</small>
+                    </div>
+                    <div class="time-rail">
+                        <!-- <div class="thumb"></div> -->
+                        <div class="track"></div>
+                        <input class="range" type="range" name="" value="0">
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a class="random"><i class="fa fa-random"></i></a><a class="prev"><i class="fa fa-step-backward"></i></a><a class="play-pause active"><i class="fa fa-pause"></i></a><a class="stop"><i class="fa fa-stop"></i></a><a class="next"><i class="fa fa-step-forward"></i></a><a class="repeat"><i class="fa fa-repeat"></i></a><a class="volume"><i class="fa fa-volume-up"></i></a>
+                    <div class="volume_div hide">
+                        <div class="track"></div>
+                        <input class="volume_line" type="range" value="30">
+                    </div>
+                </div>
+            </div>
+            <div class="lists">
+                <div class="label">MENU</div>
+                <div class="box"></div>
+                <ul id="id-ul-song-list">
+                    <!-- <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
+                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li> -->
+                </ul>
+            </div>
         </div>
-        <div id="particles">
-            <canvas class="particles-js-canvas-el"></canvas>
-        </div>
-
-        <script src="js/particles_set.js"></script>
-        <script src="js/music-player.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/get_music.js"></script>
+        <script src="js/music_player.js"></script>
     </body>
 </html>
