@@ -86,7 +86,7 @@ const bindLi = function() {
     $('#id-ul-song-list').click(function(event) {
         const self = event.target
         if (self.classList.contains('song-li')) {
-            const index = self.dataset.index
+            const index = Number(self.dataset.index)
             song_live.index = index
 
             // 载入音乐
@@ -162,15 +162,14 @@ const switchSong = (x) => {
     }
     // 获取此刻音乐的 index
     var index = song_live['index']
-    const len = list.length
 
+    const len = list.length
     // 如果循环设定为随机，将一个在 [0, len] 之间的随机整数赋值给 index，否则将 index + x 赋值给 index
     if (song_live['random']) {
         index = notPrev(index, len)
     } else {
         index = (index + x + len) % len
     }
-
     // 设定此刻音乐的 index
     song_live.index = index
     // 载入音乐
@@ -185,12 +184,10 @@ const switchSong = (x) => {
 
 const bindSwitch = () => {
     $('.prev').click(() => {
-        const x = -1
-        switchSong(x)
+        switchSong(-1)
     })
     $('.next').click(() => {
-        const x = 1
-        switchSong(x)
+        switchSong(1)
     })
 }
 

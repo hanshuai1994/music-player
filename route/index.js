@@ -30,17 +30,8 @@ var music = {
     }
 }
 
-var music_list = {
-    path: '/music/music_list',
-    method: 'get',
-    func: (request, response) => {
-        sendList(response)
-    }
-}
-
 var routes = [
     music,
-    music_list,
 ]
 
 module.exports.routes = routes
