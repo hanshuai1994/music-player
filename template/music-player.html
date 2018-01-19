@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>音乐播放器</title>
-        <link rel="icon" href="/img/favicon.jpg">
+        <link rel="icon" href="/img/favicon.ico">
         <link rel="stylesheet" href="/css/style.css">
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
         <script src="js/utils.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="js/music_api.js"></script>
     </head>
     <body>
         <div class="music-box">
@@ -26,10 +27,9 @@
                 <div class="player">
                     <audio id="id-audio-player"></audio>
                     <div class="time">
-                        <small class="current">0:00</small> / <small class="duration">2:20</small>
+                        <small class="current">0:00</small> / <small class="duration">0:00</small>
                     </div>
                     <div class="time-rail">
-                        <!-- <div class="thumb"></div> -->
                         <div class="track"></div>
                         <input class="range" type="range" name="" value="0">
                     </div>
@@ -38,29 +38,18 @@
                     <a class="random"><i class="fa fa-random"></i></a><a class="prev"><i class="fa fa-step-backward"></i></a><a class="play-pause active"><i class="fa fa-pause"></i></a><a class="stop"><i class="fa fa-stop"></i></a><a class="next"><i class="fa fa-step-forward"></i></a><a class="repeat"><i class="fa fa-repeat"></i></a><a class="volume"><i class="fa fa-volume-up"></i></a>
                     <div class="volume_div hide">
                         <div class="track"></div>
-                        <input class="volume_line" type="range" value="30">
+                        <input class="volume_line" type="range">
                     </div>
                 </div>
             </div>
             <div class="lists">
                 <div class="label">MENU</div>
                 <div class="box"></div>
-                <ul id="id-ul-song-list">
-                    <!-- <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li>
-                    <li><span>Famingo<small>Oliver Heldens</small></span><em>3:04</em></li> -->
-                </ul>
+                <ul id="id-ul-song-list"></ul>
             </div>
         </div>
+        <script src="js/music_data.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/get_music.js"></script>
         <script src="js/music_player.js"></script>
     </body>
 </html>

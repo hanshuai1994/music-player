@@ -81,7 +81,10 @@ const isFirefox = () => {
     return false
 }
 
-const timerFormat = (s) => {
+const timerFormat = (s, slide) => {
+    if(slide) {
+        s = s / slide
+    }
     const min = Math.floor(s / 60)
     var sec = Math.floor(s % 60)
     if (sec < 10) {

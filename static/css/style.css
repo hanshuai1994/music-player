@@ -11,7 +11,7 @@ body, html {
 }
 
 body {
-  font-family: "Open Sans", "Microsoft JhengHei", Arial, sans-serif;
+  font-family: "微软雅黑"
 }
 
 .music-box {
@@ -37,7 +37,7 @@ body {
   height: 300px;
 }
 .music-box .album .infos {
-  background-color: rgba(70, 50, 57, 0.3);
+  background-color: rgba(70, 50, 57, 0.5);
   width: 100%;
   height: 60px;
   position: absolute;
